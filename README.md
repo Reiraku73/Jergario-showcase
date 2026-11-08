@@ -32,11 +32,11 @@
 | Backend | Node.js, Express 5, Mongoose |
 | Database | MongoDB Atlas |
 | Auth | JWT, bcrypt, Google Identity Services, TOTP 2FA (`otplib`) |
-| Infrastructure | Vercel (web), Render (API), Cloudflare (domain, backups), Resend (email), Sentry (errors) |
+| Infrastructure | Cloudflare Pages (web), Render (API), Cloudflare (domain, backups), Resend (email), Sentry (errors) |
 
 ```mermaid
 flowchart LR
-  U[Browser] -->|HTTPS| V[Vercel<br/>React SPA]
+  U[Browser] -->|HTTPS| V[Cloudflare Pages<br/>React SPA]
   V -->|REST API| R[Render<br/>Express]
   R --> M[(MongoDB Atlas)]
   R --> E[Resend<br/>email]
